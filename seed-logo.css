@@ -1,0 +1,17 @@
+/* Preserve the approved artwork; trim only its empty margins in layout. */
+.intro h1.seed-logo {
+  position: relative;
+  width: min(100%, 360px);
+  aspect-ratio: 900 / 410;
+  overflow: hidden;
+  margin: 8px 0 18px;
+  border-radius: 18px;
+}
+.seed-logo img {
+  position: absolute;
+  width: 170.6667%;
+  max-width: none;
+  height: auto;
+  left: -36.6667%;
+  top: -63.4146%;
+}
