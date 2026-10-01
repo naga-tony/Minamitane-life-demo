@@ -29,6 +29,11 @@ jobs:
         with:
           enablement: true
 
+      - name: Validate site before upload
+        run: |
+          python3 -m unittest discover -s .github/scripts -p "test_validate_pages.py" -v
+          python3 .github/scripts/validate_pages.py . --base-path /Minamitane-life-demo/
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
