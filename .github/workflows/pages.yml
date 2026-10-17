@@ -34,6 +34,14 @@ jobs:
           python3 -m unittest discover -s .github/scripts -p "test_validate_pages.py" -v
           python3 .github/scripts/validate_pages.py . --base-path /Minamitane-life-demo/
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Test seed demo before upload
+        run: node --test .github/scripts/test_seed_demo.cjs
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
