@@ -34,4 +34,4 @@ git diff --check
 既存Pagesゲート13テストPASS、追加状態遷移7テストPASS。
 ブラウザで上記9段階を操作し、精算待ち0・精算記録済み300を確認。
 既存ホームの表示と追加入口からの遷移を確認。
-追加Nodeテストは手動実行。既存workflowは変更していないため、現時点ではCIには未追加。
+追加NodeテストはPages workflowで既存検証の後、Upload前に自動実行。失敗時はUpload・Deployへ進まない。
